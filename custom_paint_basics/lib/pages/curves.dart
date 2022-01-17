@@ -20,12 +20,12 @@ class CurvesPainter extends CustomPainter {
       ..strokeWidth = 3.0
       ..style = PaintingStyle.fill;
 
-    var path = Path();
-    path.moveTo(0.0, 0.0);
-    path.lineTo(0.0, 200.0);
-    path.quadraticBezierTo(size.width / 2, 250.0, size.width, 200.0);
-    path.lineTo(size.width, 0.0);
-    path.close();
+    var path = Path()
+      ..moveTo(0.0, 0.0)
+      ..lineTo(0.0, 200)
+      ..quadraticBezierTo(size.width / 2, 250.0, size.width, 200.0)
+      ..lineTo(size.width, 0.0)
+      ..close();
     canvas.drawPath(path, paint);
   }
 

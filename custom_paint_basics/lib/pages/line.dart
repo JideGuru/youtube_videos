@@ -15,13 +15,10 @@ class LinePage extends StatelessWidget {
 class LinePainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    Paint paint = Paint()
-      ..color = Colors.black
-      ..strokeWidth = 3.0
-      ..style = PaintingStyle.stroke;
+    Paint paint = Paint()..strokeWidth = 3.0;
 
-    Offset p1 = Offset(10.0, size.height / 2.0);
-    Offset p2 = Offset(size.width - 10.0, size.height / 2.0);
+    Offset p1 = Offset(10.0, size.height / 2);
+    Offset p2 = Offset(size.width - 10.0, size.height / 2);
     canvas.drawLine(p1, p2, paint);
   }
 

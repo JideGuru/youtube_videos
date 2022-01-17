@@ -20,8 +20,8 @@ class RectanglePainter extends CustomPainter {
       ..strokeWidth = 3.0
       ..style = PaintingStyle.stroke;
 
-    Offset center = Offset(size.width / 2.0, size.height / 2.0);
-    Rect rect = Rect.fromCircle(center: center, radius: 100.0);
+    Offset center = Offset(size.width / 2, size.height / 2);
+    Rect rect = Rect.fromCircle(center: center, radius: 70.0);
     canvas.drawRect(rect, paint);
   }
 

@@ -22,9 +22,10 @@ class TrianglePainter extends CustomPainter {
 
     Path path = Path();
     path.moveTo(size.width / 2, size.height / 3);
-    path.lineTo(80.0, 400);
-    path.lineTo(size.width - 80.0, 400);
+    path.lineTo(80.0, 400.0);
+    path.lineTo(size.width - 80.0, 400.0);
     path.close();
+
     canvas.drawPath(path, paint);
   }
 
