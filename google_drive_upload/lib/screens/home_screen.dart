@@ -12,19 +12,14 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  DriveService driveService = DriveService();
+  pickAndUploadFile() async {
+    FilePickerResult? result = await FilePicker.platform.pickFiles();
 
-  pickImage() async {
-    // Pick a file
-    FilePickerResult? result = await FilePicker.platform.pickFiles(
-      type: FileType.image,
-    );
     if (result != null) {
       File file = File(result.files.single.path!);
-      await driveService.upload(file);
+      await DriveService().upload(file);
     } else {
       // User canceled the picker
-      print('cancelled');
     }
   }
 
@@ -34,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(title: Text('Google Drive upload')),
       body: Center(
         child: TextButton(
-          onPressed: () => pickImage(),
+          onPressed: () => pickAndUploadFile(),
           child: Text('Upload Image'),
         ),
       ),
