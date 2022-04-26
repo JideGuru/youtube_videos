@@ -51,7 +51,7 @@ class _SplashScreenState extends State<SplashScreen>
             height: copAnimated ? screenHeight / 1.9 : screenHeight,
             decoration: BoxDecoration(
               color: Colors.white,
-              borderRadius: BorderRadius.circular(copAnimated ? 40.0 : 0.0),
+              borderRadius: BorderRadius.vertical(bottom: Radius.circular(copAnimated ? 40.0 : 0.0)),
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
